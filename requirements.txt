@@ -9,3 +9,4 @@ PyJWT==2.8.0
 pytz==2024.1
 rest-framework-simplejwt==0.0.2
 sqlparse==0.4.4
+python-dotenv~=1.0.1
