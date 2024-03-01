@@ -21,7 +21,7 @@ class Lesson(models.Model):
     title = models.CharField(max_length=150, verbose_name='название урока')
     description = models.TextField(verbose_name='описание')
     preview = models.ImageField(upload_to='lms/static/images', verbose_name='картинка')
-    url = models.CharField(max_length=150, verbose_name='ссылка')
+    url = models.URLField(max_length=150, verbose_name='ссылка')
     course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, verbose_name='курс', null=True, blank=True)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
 
