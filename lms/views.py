@@ -11,7 +11,7 @@ from lms.serializers import CourseSerializer, LessonSerializer, PaymentSerialize
 class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
     queryset = Course.objects.all()
-    permission_classes = []
+    # permission_classes = []
 
     def get_permissions(self):
         if self.action == 'create':
@@ -34,17 +34,17 @@ class CourseViewSet(viewsets.ModelViewSet):
 
 class LessonCreateAPIView(generics.CreateAPIView):
     serializer_class = LessonSerializer
-    permission_classes = [IsAuthenticated, ~IsStaff]
+    # permission_classes = [IsAuthenticated, ~IsStaff]
 
-    def perform_create(self, serializer):
-        new_lesson = serializer.save()
-        new_lesson.owner = self.request.user
-        new_lesson.save()
+    # def perform_create(self, serializer):
+    #     new_lesson = serializer.save()
+    #     new_lesson.owner = self.request.user
+    #     new_lesson.save()
 
 
 class LessonDeleteAPIView(generics.DestroyAPIView):
     queryset = Lesson.objects.all()
-    permission_classes = [IsAuthenticated, IsOwner]
+    # permission_classes = [IsAuthenticated, IsOwner]
 
 
 class LessonListAPIView(generics.ListAPIView):
@@ -56,13 +56,13 @@ class LessonListAPIView(generics.ListAPIView):
 class LessonUpdateAPIView(generics.UpdateAPIView):
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
-    permission_classes = [IsAuthenticated, IsOwner | IsStaff]
+    # permission_classes = [IsAuthenticated, IsOwner | IsStaff]
 
 
 class LessonRetrieveAPIView(generics.RetrieveAPIView):
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
-    permission_classes = [IsAuthenticated, IsOwner | IsStaff]
+    # permission_classes = [IsAuthenticated, IsOwner | IsStaff]
 
 
 class PaymentListAPIView(generics.ListAPIView):
