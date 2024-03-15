@@ -55,5 +55,6 @@ class Payment(models.Model):
         return f'{self.user} {self.payment_method}'
 
     class Meta:
+        ordering = ('payment_date',)
         verbose_name = 'платеж'
         verbose_name_plural = 'платежи'
