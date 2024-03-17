@@ -9,8 +9,8 @@ NULLABLE = {'null': True, 'blank': True}
 
 class Course(models.Model):
     title = models.CharField(max_length=150, verbose_name='название')
-    preview = models.ImageField(upload_to='lms/static/images', verbose_name='картинка')
-    description = models.TextField(verbose_name='описание')
+    preview = models.ImageField(upload_to='lms/static/images', verbose_name='картинка', **NULLABLE)
+    description = models.TextField(verbose_name='описание', **NULLABLE)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE)
 
     def __str__(self):
