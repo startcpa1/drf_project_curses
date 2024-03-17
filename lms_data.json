@@ -1,0 +1,60 @@
+[
+  {
+    "model": "lms.course",
+    "pk": 1,
+    "fields": {
+      "title": "Good Python",
+      "preview": "",
+      "description": "",
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "Python урок 2",
+      "description": "2 урок",
+      "preview": "",
+      "url": null,
+      "course": 1,
+      "owner": 1
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 2,
+    "fields": {
+      "title": "Python урок 1",
+      "description": "Начало",
+      "preview": "",
+      "url": null,
+      "course": 1,
+      "owner": 1
+    }
+  },
+  {
+    "model": "lms.payment",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-03-16T23:12:14Z",
+      "payment_course": 1,
+      "payment_lesson": 1,
+      "amount": 3000.0,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "lms.payment",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-03-14T23:12:14Z",
+      "payment_course": 1,
+      "payment_lesson": 2,
+      "amount": 3000.0,
+      "payment_method": "transfer"
+    }
+  }
+]
