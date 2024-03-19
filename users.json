@@ -1,0 +1,22 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$H36HYkAHzY3kHhrc70XRMo$Ih8IMbNBBJ+dnT1EkXh3R+YgzaTHgZ+TTN6OlC8rH8c=",
+      "last_login": "2024-03-16T23:08:27.320Z",
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "SkyPro",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-03-16T23:06:17.021Z",
+      "email": "admin@sky.pro",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
