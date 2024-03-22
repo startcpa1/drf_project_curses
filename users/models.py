@@ -4,7 +4,13 @@ from django.db import models
 NULLABLE = {'null': True, 'blank': True}
 
 
+class UserRole(models.TextChoices):
+    MEMBER = 'member'
+    MODERATOR = 'moderator'
+
+
 class User(AbstractUser):
+    role = models.CharField(max_length=15, verbose_name='роль', choices=UserRole.choices, default=UserRole.MEMBER)
 
     username = None
     email = models.EmailField(unique=True, verbose_name='почта')
